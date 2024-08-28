@@ -54,13 +54,30 @@ header {
     padding-bottom: 30px;
 }
 
-#card {
+.card {
     padding-left: 10px;
 }
 
-#action {
+.text_card {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.important {
+    border-left: 5px solid red;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action div {
+    display: flex;
+    width: 40px;
+    gap: 10px;
+    padding-right: 20px;
 }
 
 button {
@@ -73,4 +90,39 @@ button {
 
 li {
     padding: 3px 0 3px 10px;
+}
+
+#project_dialog {
+    /*display: flex;*/
+    margin-top: 35vh;
+    margin-left: 35vw;
+}
+
+#task_dialog {
+    /*display: flex;*/
+    margin-left: 36vw;
+    margin-top: 30vh;
+}
+
+form {
+    display: flex;
+    padding: 60px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+form input {
+    font-size: 1.1em;
+}
+
+#close_project_dialog, #close_task_dialog {
+    width: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4em;
 }

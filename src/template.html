@@ -6,55 +6,83 @@
     <title>To Do List</title>
 </head>
 <body>
+    <dialog id="project_dialog">
+        <form method="dialog">
+            <p>
+                <label>
+                    Project name:
+                    <input type="text" name="project_name" id="project_name" required>
+                </label>
+            </p>
+            <input type="button" id="close_project_dialog" value="+">
+        </form>
+    </dialog>
+    <dialog id="task_dialog">
+        <form method="dialog">
+            <p>
+                <label>
+                    Task name:
+                    <input type="text" name="task_name" id="task_name" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Description:
+                    <input type="text" name="task_description" id="task_description">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="date" id="due_date" name="due_date" required>
+                </label>
+            </p>
+            <label>Is it important:</label>
+            <select name="option" id="option" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <input type="button" id="close_task_dialog" value="+">
+        </form>
+    </dialog>
+    <dialog id="edit_dialog">
+        <form method="dialog">
+            <p>
+                <label>
+                    Task name:
+                    <input type="text" name="edit_name" id="edit_name" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Description:
+                    <input type="text" name="edit_description" id="edit_description">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="date" id="edit_date" name="edit_date" required>
+                </label>
+            </p>
+            <label>Is it important:</label>
+            <select name="edit_option" id="edit_option" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <input type="button" id="save_edit_task" value="+">
+        </form>
+    </dialog>
     <header>
         <h1>To Do List</h1>
     </header>
     <div id="sidebar">
         <div id="static">
-            <h2>Add new list</h3>
-            <button id="new_list">+</button>
+            <h2>Add new project</h3>
+            <button id="new_project">+</button>
         </div>
-        <div id="lists">
-            <div id="card">
-                <div id="action">
-                    <h2>My first list</h3>
-                    <button id="new_todo">+</button>
-                    <button id="del_list">x</button>
-                    <button id="extend_list">⇓</button>
-                </div>
-                <div id="listing">
-                    <ul id="todo">
-                        <li>Dinner</li>
-                        <li>Meeting</li>
-                        <li>TV</li>
-                    </ul>
-                </div>
-            </div>
-            
+        <div id="projects">  
         </div>
     </div>
     <div id="catalog">
-        <div id="task">
-            <h3>Dinner</h3>
-            <div>
-                <button id="del_task">x</button>
-                <button id="extend_task">⇓</button>
-            </div>
-        </div>
-        <div id="task">
-            <h3>Meeting</h3>
-            <div>
-                <button id="del_task">x</button>
-                <button id="extend_task">⇓</button>
-            </div>
-        </div>
-        <div id="task">
-            <h3>TV</h3>
-            <div>
-                <button id="del_task">x</button>
-                <button id="extend_task">⇓</button>
-            </div>
-        </div>
     </div>
 </body>
 </html>
